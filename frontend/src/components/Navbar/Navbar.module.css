@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f5f7fb;
+}
+
+/* NAVBAR */
+
+.navbar {
+  width: 100%;
+  padding: 20px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navContainer {
+  max-width: 1300px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 24px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  border-radius: 24px;
+
+  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.08);
+}
+
+/* LOGO */
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logoText {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* NAV LINKS */
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 36px;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #4b5563;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.navLinks a:hover {
+  color: #111827;
+}
+
+/* ACTIONS */
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.loginBtn {
+  padding: 12px 22px;
+
+  border: none;
+  border-radius: 999px;
+
+  background-color: #111827;
+  color: white;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.loginBtn:hover {
+  background-color: #1f2937;
+}
+
+/* MOBILE MENU BUTTON */
+
+.menuBtn {
+  display: none;
+
+  border: none;
+  background: transparent;
+
+  font-size: 1.6rem;
+  cursor: pointer;
+
+  color: #111827;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .navLinks {
+    display: none;
+  }
+
+  .menuBtn {
+    display: block;
+  }
+
+  .navbar {
+    padding: 16px;
+  }
+
+  .navContainer {
+    padding: 12px 18px;
+  }
+
+  .logoText {
+    font-size: 1rem;
+  }
+
+  .loginBtn {
+    display: none;
+  }
+}
+
+.mobileMenu {
+  max-height: 0;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+
+  background: white;
+
+  margin-top: 12px;
+
+  border-radius: 20px;
+
+  padding: 0 20px;
+
+  transition:
+    max-height 0.4s ease,
+    padding 0.4s ease;
+}
+
+.mobileMenu a {
+  text-decoration: none;
+  color: #111827;
+  font-weight: 500;
+}
+
+.mobileMenu.active {
+  max-height: 300px;
+  padding: 20px;
+}

@@ -1,0 +1,137 @@
+.ward_card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 28px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.ward_card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+}
+
+.card_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.ward_info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ward_name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.ward_id_badge {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+  gap: 4px;
+}
+
+.councillor_section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+  background: #f9fafb;
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.councillor_label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.councillor_value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.not_available {
+  color: #9ca3af;
+  font-style: italic;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card_divider {
+  border: 0;
+  height: 1px;
+  background: #f3f4f6;
+  margin: 0 0 20px 0;
+}
+
+.card_footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.btn_assign {
+  background: #111827;
+  color: #ffffff;
+  border: 1px solid #111827;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn_assign:hover {
+  background: #1f2937;
+}
+
+.btn_view {
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn_view:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}

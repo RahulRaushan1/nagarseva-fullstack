@@ -1,0 +1,244 @@
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(17, 24, 39, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 16px;
+  box-sizing: border-box;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal_content {
+  background: #ffffff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.3s ease-out;
+  overflow: hidden;
+}
+
+.modal_header {
+  padding: 24px 24px 20px 24px;
+  border-bottom: 1px solid #f3f4f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.header_text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.modal_subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.btn_close {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.btn_close:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.modal_body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.summary_card {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  border: 1px solid #f3f4f6;
+}
+
+.summary_item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.summary_item_full {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  grid-column: span 2;
+}
+
+.summary_label {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.summary_value {
+  font-size: 14px;
+  color: #111827;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form_label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form_select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #111827;
+  background: #ffffff;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+.form_select:focus {
+  outline: none;
+  border-color: #111827;
+  box-shadow: 0 0 0 2px rgba(17, 24, 39, 0.1);
+}
+
+.modal_footer {
+  padding: 16px 24px;
+  border-top: 1px solid #f3f4f6;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  background: #f9fafb;
+  flex-shrink: 0;
+}
+
+.btn_cancel {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn_cancel:hover {
+  background: #f3f4f6;
+}
+
+.btn_submit {
+  background: #111827;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn_submit:hover:not(:disabled) {
+  background: #1f2937;
+}
+
+.btn_submit:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.loader {
+  border: 2px solid #f3f4f6;
+  border-top: 2px solid #ffffff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 640px) {
+  .modal_header {
+    padding: 20px 16px 16px 16px;
+  }
+  .modal_body {
+    padding: 16px;
+    gap: 16px;
+  }
+  .summary_card {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .summary_item_full {
+    grid-column: span 1;
+  }
+  .modal_footer {
+    padding: 16px;
+  }
+}

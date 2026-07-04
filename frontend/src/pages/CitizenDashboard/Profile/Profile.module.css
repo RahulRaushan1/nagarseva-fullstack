@@ -1,0 +1,512 @@
+.profile_wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 8px 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.profile_card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 28px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile_card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
+}
+
+/* Profile Hero Card */
+.hero_card {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero_left {
+  flex-shrink: 0;
+}
+
+.avatar_circle {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 20px rgba(17, 24, 39, 0.15);
+  border: 3px solid #ffffff;
+}
+
+.hero_right {
+  flex-grow: 1;
+}
+
+.hero_header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.role_badge {
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.email {
+  font-size: 15px;
+  color: #6b7280;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.email i {
+  font-size: 16px;
+}
+
+.meta_info {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 16px;
+}
+
+.meta_item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.meta_item i {
+  font-size: 18px;
+  color: #9ca3af;
+}
+
+.meta_label {
+  color: #9ca3af;
+  margin-right: 4px;
+  font-weight: 400;
+}
+
+/* Card Titles */
+.card_title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card_title i {
+  font-size: 20px;
+  color: #4b5563;
+}
+
+.card_description {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Security Settings & Forms */
+.security_body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn_primary {
+  background: #111827;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn_primary:hover:not(:disabled) {
+  background: #1f2937;
+}
+
+.btn_primary:active {
+  transform: scale(0.98);
+}
+
+.btn_primary:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Preferences Settings */
+.preference_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.preferences_list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.preference_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.preference_item:not(:last-child) {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.preference_label_group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.preference_name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.preference_desc {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* Custom Switch Toggle */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e5e7eb;
+  transition: .3s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .3s;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+input:checked + .slider {
+  background-color: #10b981;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Account Actions / Danger Zone */
+.danger_body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.danger_text {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.btn_danger {
+  background: #fef2f2;
+  color: #ef4444;
+  border: 1px solid #fee2e2;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease, transform 0.1s ease;
+}
+
+.btn_danger:hover {
+  background: #fee2e2;
+  color: #dc2626;
+  border-color: #fca5a5;
+}
+
+.btn_danger:active {
+  transform: scale(0.98);
+}
+
+/* Modal Overlay & Card Form */
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 16px;
+}
+
+.modal_content {
+  background: #ffffff;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 480px;
+  padding: 32px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modal_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.btn_close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 50%;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn_close:hover {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+}
+
+.input_wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input_field {
+  width: 100%;
+  padding: 12px 48px 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  color: #0f172a;
+  outline: none;
+  transition: all 0.2s ease;
+  background-color: #f8fafc;
+}
+
+.input_field:focus {
+  border-color: #0f172a;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.05);
+}
+
+.toggle_icon {
+  position: absolute;
+  right: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.toggle_icon:hover {
+  color: #0f172a;
+}
+
+.icon_svg {
+  width: 20px;
+  height: 20px;
+}
+
+.password_validation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.password_validation.invalid {
+  color: #ef4444;
+}
+
+.password_validation.valid {
+  color: #10b981;
+}
+
+.icon_small {
+  width: 16px;
+  height: 16px;
+}
+
+.modal_footer {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 28px;
+}
+
+.btn_cancel {
+  background: #ffffff;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn_cancel:hover {
+  background: #f9fafb;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+  .hero_card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .avatar_circle {
+    width: 80px;
+    height: 80px;
+    font-size: 28px;
+  }
+
+  .meta_info {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .security_body, .danger_body {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .btn_primary, .btn_danger, .btn_cancel {
+    width: 100%;
+    text-align: center;
+  }
+}

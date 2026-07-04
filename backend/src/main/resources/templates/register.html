@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to NagarSeva</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #f0ede8;
+        font-family: "DM Sans", sans-serif;
+        padding: 40px 16px;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .email-wrapper {
+        max-width: 580px;
+        margin: 0 auto;
+      }
+
+      /* Pre-header label */
+      .pre-header {
+        text-align: center;
+        font-size: 11px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #999;
+        margin-bottom: 16px;
+      }
+
+      /* Main card */
+      .email-card {
+        background: #ffffff;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid #e8e4de;
+      }
+
+      /* Header */
+      .header {
+        background: #0c0c0c;
+        padding: 36px 48px 30px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .header::before {
+        content: "";
+        position: absolute;
+        top: -60px;
+        right: -60px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .header::after {
+        content: "";
+        position: absolute;
+        bottom: -40px;
+        left: -20px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .logo-image {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        object-fit: cover;
+        background: #ffffff;
+        padding: 4px;
+        flex-shrink: 0;
+      }
+
+      .brand-row {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-image {
+        width: 52px;
+        height: 52px;
+
+        border-radius: 50%;
+        object-fit: cover;
+
+        background: #ffffff;
+        padding: 4px;
+
+        flex-shrink: 0;
+      }
+
+      .brand-text {
+        display: inline-block;
+        vertical-align: middle;
+
+        margin-left: 14px;
+      }
+
+      .brand-name {
+        display: block;
+
+        font-size: 22px;
+        font-weight: 600;
+
+        color: #ffffff;
+
+        letter-spacing: 0.5px;
+        line-height: 1.2;
+      }
+
+      .brand-tagline {
+        display: block;
+
+        margin-top: 6px;
+
+        font-size: 11px;
+        font-weight: 400;
+
+        color: #777777;
+
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        line-height: 1.5;
+      }
+
+      /* Body */
+      .body {
+        padding: 40px 48px;
+      }
+
+      .greeting-eyebrow {
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #aaa;
+        margin-bottom: 8px;
+      }
+
+      .greeting-heading {
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        font-weight: 700;
+        color: #0c0c0c;
+        line-height: 1.2;
+        margin-bottom: 16px;
+      }
+
+      .greeting-heading span {
+        color: #0c0c0c;
+        border-bottom: 3px solid #f0c040;
+        padding-bottom: 1px;
+      }
+
+      .intro-text {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.8;
+        margin-bottom: 32px;
+      }
+
+      /* Divider */
+      .section-label {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #bbb;
+        margin-bottom: 16px;
+      }
+
+      /* Feature list */
+      .features {
+        background: #faf9f7;
+        border-radius: 14px;
+        border: 1px solid #ede9e3;
+        padding: 24px;
+        margin-bottom: 32px;
+        display: block;
+        gap: 16px;
+      }
+
+      .feature-item {
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+
+      .feature-icon {
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+
+        text-align: center;
+
+        border-radius: 10px;
+        font-size: 17px;
+
+        float: left;
+        margin-right: 14px;
+      }
+
+      .feature-content {
+        overflow: hidden;
+      }
+
+      .icon-amber {
+        background: #fff8e6;
+      }
+      .icon-blue {
+        background: #eaf3fd;
+      }
+      .icon-green {
+        background: #e8f5ee;
+      }
+
+      .feature-title {
+        font-size: 14px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-bottom: 2px;
+      }
+
+      .feature-desc {
+        font-size: 12px;
+        color: #999;
+        line-height: 1.6;
+      }
+
+      /* CTA */
+      .cta-block {
+        text-align: center;
+        margin-bottom: 32px;
+      }
+
+      .cta-btn {
+        display: inline-block;
+        background: #0c0c0c;
+        color: #ffffff !important;
+        font-family: "DM Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 14px 40px;
+        border-radius: 50px;
+        text-decoration: none;
+        letter-spacing: 0.5px;
+      }
+
+      .cta-sub {
+        font-size: 11px;
+        color: #bbb;
+        margin-top: 10px;
+      }
+
+      /* Sign off */
+      .signoff {
+        border-top: 1px solid #f0ede8;
+        padding-top: 24px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .signoff-avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: #0c0c0c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        font-weight: 600;
+        color: #fff;
+        flex-shrink: 0;
+      }
+
+      .signoff-text p {
+        font-size: 13px;
+        color: #888;
+        line-height: 1.6;
+      }
+
+      .signoff-text strong {
+        color: #333;
+        font-weight: 600;
+      }
+
+      /* Footer */
+      .footer {
+        background: #faf9f7;
+        border-top: 1px solid #ede9e3;
+
+        padding: 18px 48px;
+
+        text-align: center;
+      }
+
+      .footer p {
+        font-size: 11px;
+        color: #bbb;
+
+        letter-spacing: 0.3px;
+      }
+
+      .footer a {
+        color: #aaa;
+        text-decoration: underline;
+      }
+
+      /* Stats strip */
+      .stats-strip {
+        display: flex;
+        gap: 0;
+        border: 1px solid #ede9e3;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 32px;
+      }
+
+      .stat-item {
+        flex: 1;
+        padding: 16px 12px;
+        text-align: center;
+        background: #fff;
+        border-right: 1px solid #ede9e3;
+      }
+
+      .stat-item:last-child {
+        border-right: none;
+      }
+
+      .stat-number {
+        font-family: "Playfair Display", serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: #0c0c0c;
+      }
+
+      .stat-label {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #bbb;
+        margin-top: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-wrapper">
+      <p class="pre-header">Registration Confirmation · NagarSeva</p>
+
+      <div class="email-card">
+        <!-- Header -->
+        <div class="header">
+          <div class="brand-row">
+            <img
+              src="https://res.cloudinary.com/dzexb7f3p/image/upload/v1778174553/Gemini_Generated_Image_dk0cs1dk0cs1dk0c_4_copy_ibfkmg.png"
+              alt="NagarSeva Logo"
+              class="logo-image"
+            />
+
+            <div class="brand-text">
+              <span class="brand-name">NagarSeva</span>
+
+              <span class="brand-tagline">
+                Your Voice. Your City. Your Change.
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Body -->
+        <div class="body">
+          <p class="greeting-eyebrow">Welcome aboard</p>
+          <h1 class="greeting-heading">Hello, <span>{{name}}!</span> 🎉</h1>
+          <p class="intro-text">
+            You're now part of a growing community of active citizens dedicated
+            to making our cities cleaner, safer, and more livable. Every issue
+            you report brings us one step closer to the city we all deserve.
+          </p>
+
+          <!-- Features -->
+          <!-- Features -->
+          <p class="section-label">What you can do</p>
+
+          <div class="features">
+            <div class="feature-item">
+              <div class="feature-icon icon-amber">⚠️</div>
+
+              <div class="feature-content">
+                <p class="feature-title">Report Civic Issues</p>
+
+                <p class="feature-desc">
+                  Potholes, garbage dumps, broken streetlights, water leakage —
+                  report anything that needs fixing.
+                </p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon icon-blue">📍</div>
+
+              <div class="feature-content">
+                <p class="feature-title">Track Your Complaints</p>
+
+                <p class="feature-desc">
+                  Get real-time updates on the resolution status of every issue
+                  you've raised.
+                </p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon icon-green">👥</div>
+
+              <div class="feature-content">
+                <p class="feature-title">Community Impact</p>
+
+                <p class="feature-desc">
+                  Upvote neighbourhood issues, collaborate with fellow citizens,
+                  and amplify your voice.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="cta-block">
+            <a href="#" class="cta-btn">Start Reporting Now →</a>
+            <p class="cta-sub">
+              Takes less than 2 minutes to file your first report
+            </p>
+          </div>
+
+          <!-- Sign off -->
+          <div class="signoff">
+            <img
+              src="https://res.cloudinary.com/dzexb7f3p/image/upload/v1778174553/Gemini_Generated_Image_dk0cs1dk0cs1dk0c_4_copy_ibfkmg.png"
+              alt="NagarSeva Logo"
+              class="logo-image"
+            />
+            <div class="signoff-text">
+              <p>
+                Together, let's build the city we deserve. 🏙️<br /><strong
+                  >— Team NagarSeva</strong
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+          <p>© 2026 NagarSeva. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

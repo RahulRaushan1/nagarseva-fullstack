@@ -1,0 +1,177 @@
+.timeline_card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 24px;
+}
+
+.timeline_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+.timeline_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline_step {
+  display: flex;
+  min-height: 80px;
+}
+
+.step_indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  position: relative;
+}
+
+.circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  border: 2px solid #e5e7eb;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.line {
+  width: 2px;
+  flex: 1;
+  background: #e5e7eb;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  transition: all 0.3s ease;
+}
+
+.step_content {
+  padding-bottom: 24px;
+  flex: 1;
+}
+
+.timeline_step:last-child .step_content {
+  padding-bottom: 0;
+}
+
+.step_title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 4px 0;
+  transition: color 0.3s ease;
+}
+
+.step_desc {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Completed State */
+.completed .circle {
+  background: #10b981;
+  border-color: #10b981;
+}
+
+.completed .check_icon {
+  width: 16px;
+  height: 16px;
+  color: #ffffff;
+}
+
+.completed .line {
+  background: #10b981;
+}
+
+.completed .step_title {
+  color: #111827;
+}
+
+/* Current State */
+.current .circle {
+  background: #e0f2fe;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.inner_circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #3b82f6;
+}
+
+.current .step_title {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+/* Future State */
+.future .circle {
+  background: #ffffff;
+  border-color: #e5e7eb;
+}
+
+.future .step_title {
+  color: #9ca3af;
+}
+
+.future .step_desc {
+  color: #9ca3af;
+}
+
+/* Reopened Active (Warning) State */
+.reopened_active .circle {
+  background: #fff7ed;
+  border-color: #ea580c;
+  box-shadow: 0 0 0 4px rgba(234, 88, 12, 0.12);
+}
+
+.reopened_active .step_title {
+  color: #ea580c;
+  font-weight: 700;
+}
+
+.reopened_active .step_desc {
+  color: #c2410c;
+}
+
+.warning_icon {
+  width: 18px;
+  height: 18px;
+  color: #ea580c;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Reopened dashed connector line */
+.completed .line_dashed {
+  background: transparent !important;
+  border-left: 2px dashed #ea580c !important;
+  width: 0;
+  flex: 1;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.9;
+  }
+}
+

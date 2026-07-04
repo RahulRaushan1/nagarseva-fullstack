@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Complaint Automatically Closed · NagarSeva</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #f0ede8;
+        font-family: Arial, sans-serif;
+        padding: 40px 16px;
+    }
+
+    .email-wrapper {
+        max-width: 580px;
+        margin: 0 auto;
+    }
+
+    .pre-header {
+        text-align: center;
+        font-size: 11px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #999;
+        margin-bottom: 16px;
+    }
+
+    .email-card {
+    width: 100%;
+
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #e8e4de;
+}
+
+    .header {
+    background: #0c0c0c;
+    padding: 28px 24px;
+}
+
+    .brand-row {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-image {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        object-fit: cover;
+        background: #ffffff;
+        padding: 4px;
+        flex-shrink: 0;
+    }
+
+    .brand-text {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 14px;
+    }
+
+    .brand-name {
+        display: block;
+        font-size: 22px;
+        font-weight: 600;
+        color: #ffffff;
+        letter-spacing: 0.5px;
+        line-height: 1.2;
+    }
+
+    .brand-tagline {
+        display: block;
+        margin-top: 6px;
+        font-size: 11px;
+        font-weight: 400;
+        color: #777777;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        line-height: 1.5;
+    }
+
+    .body {
+    padding: 32px 24px;
+}
+
+    .greeting-eyebrow {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #999;
+        margin-bottom: 10px;
+    }
+
+    .greeting-heading {
+        font-size: 32px;
+        font-weight: bold;
+        color: #0c0c0c;
+        line-height: 1.3;
+        margin-bottom: 18px;
+    }
+
+    .greeting-heading span {
+        border-bottom: 3px solid #0c0c0c;
+        padding-bottom: 2px;
+    }
+
+    .intro-text {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.8;
+        margin-bottom: 30px;
+    }
+
+    .status-card {
+        background: #faf9f7;
+        border: 1px solid #ede9e3;
+        border-radius: 14px;
+        padding: 24px;
+        margin-bottom: 30px;
+    }
+
+    .status-label {
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #999;
+        margin-bottom: 14px;
+    }
+
+    .status-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #0c0c0c;
+        margin-bottom: 12px;
+    }
+
+    .status-desc {
+        font-size: 13px;
+        color: #777;
+        line-height: 1.7;
+    }
+
+    .details-box {
+        border: 1px solid #ede9e3;
+        border-radius: 14px;
+        overflow: hidden;
+        margin-bottom: 32px;
+    }
+
+    .detail-row {
+        padding: 14px 18px;
+        border-bottom: 1px solid #ede9e3;
+        font-size: 13px;
+    }
+
+    .detail-row:last-child {
+        border-bottom: none;
+    }
+
+    .detail-label {
+    display: block;
+
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    color: #888;
+
+    margin-bottom: 6px;
+}
+
+.detail-value {
+    display: block;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: #222;
+}
+
+    .info-note {
+        background: #f8f8f8;
+        border: 1px solid #e4e4e4;
+        border-radius: 14px;
+        padding: 18px;
+        margin-bottom: 30px;
+    }
+
+    .info-note p {
+        font-size: 13px;
+        color: #666;
+        line-height: 1.7;
+    }
+
+    .signoff {
+        border-top: 1px solid #f0ede8;
+        padding-top: 24px;
+    }
+
+    .signoff-text p {
+        font-size: 13px;
+        color: #888;
+        line-height: 1.7;
+    }
+
+    .signoff-text strong {
+        color: #333;
+    }
+
+    .footer {
+    background: #faf9f7;
+    border-top: 1px solid #ede9e3;
+    padding: 18px 24px;
+    text-align: center;
+}
+
+    .footer p {
+        font-size: 11px;
+        color: #bbb;
+        letter-spacing: 0.3px;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="email-wrapper">
+
+
+<p class="pre-header">
+    Complaint Automatically Closed · NagarSeva
+</p>
+
+<div class="email-card">
+
+    <!-- Header -->
+    <div class="header">
+
+        <div class="brand-row">
+
+            <img
+                src="https://res.cloudinary.com/dzexb7f3p/image/upload/v1778174553/Gemini_Generated_Image_dk0cs1dk0cs1dk0c_4_copy_ibfkmg.png"
+                alt="NagarSeva Logo"
+                class="logo-image"
+            />
+
+            <div class="brand-text">
+
+                <span class="brand-name">
+                    NagarSeva
+                </span>
+
+                <span class="brand-tagline">
+                    Your Voice. Your City. Your Change.
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Body -->
+    <div class="body">
+
+        <p class="greeting-eyebrow">
+            Complaint Update
+        </p>
+
+        <h1 class="greeting-heading">
+            Complaint <span>Auto Closed</span> ⏳
+        </h1>
+
+        <p class="intro-text">
+            Hello {{name}}, your complaint has been automatically marked as closed because no verification response was received within the allowed verification period after work completion.
+        </p>
+
+        <!-- Status Card -->
+        <div class="status-card">
+
+            <p class="status-label">
+                Current Status
+            </p>
+
+            <h2 class="status-title">
+                Automatically Closed
+            </h2>
+
+            <p class="status-desc">
+                Since the verification window expired without citizen feedback, the system automatically finalized and closed the complaint as per the complaint resolution workflow.
+            </p>
+
+        </div>
+
+        <!-- Details -->
+        <div class="details-box">
+
+            <div class="detail-row">
+                <span class="detail-label">Complaint ID</span>
+                <span class="detail-value">#NS-{{complaintId}}</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Issue Type</span>
+                <span class="detail-value">{{issueType}}</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Ward</span>
+                <span class="detail-value">Ward {{wardNo}}</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Final Status</span>
+                <span class="detail-value">{{status}}</span>
+            </div>
+
+        </div>
+
+        <!-- Note -->
+        <div class="info-note">
+            <p>
+                If the issue still persists or requires additional attention, you may create a new complaint request through NagarSeva with updated details and supporting information.
+            </p>
+        </div>
+
+        <!-- Signoff -->
+        <div class="signoff">
+
+            <div class="signoff-text">
+                <p>
+                    Thank you for participating in improving civic infrastructure and public services. 🏙️<br>
+                    <strong>— Team NagarSeva</strong>
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2026 NagarSeva. All rights reserved.</p>
+    </div>
+
+</div>
+
+
+</div>
+
+</body>
+</html>

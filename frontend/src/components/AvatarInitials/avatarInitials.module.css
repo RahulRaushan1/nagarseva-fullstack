@@ -1,0 +1,14 @@
+.avatar_container {
+  border-radius: 50%;
+  background: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  user-select: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}

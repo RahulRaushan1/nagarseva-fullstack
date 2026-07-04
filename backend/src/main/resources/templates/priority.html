@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Complaint Priority Updated · NagarSeva</title>
+
+<style>
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    body{
+        background:#f0ede8;
+        font-family:Arial,sans-serif;
+        padding:40px 16px;
+    }
+
+    .email-wrapper{
+        max-width:580px;
+        margin:0 auto;
+    }
+
+    .pre-header{
+        text-align:center;
+        font-size:11px;
+        letter-spacing:3px;
+        text-transform:uppercase;
+        color:#999;
+        margin-bottom:16px;
+    }
+
+    .email-card{
+        background:#ffffff;
+        border-radius:20px;
+        overflow:hidden;
+        border:1px solid #e8e4de;
+    }
+
+    .header{
+        background:#0c0c0c;
+        padding:36px 48px 30px;
+    }
+
+    .brand-row{
+        display:flex;
+        align-items:center;
+    }
+
+    .logo-image{
+        width:52px;
+        height:52px;
+        border-radius:50%;
+        object-fit:cover;
+        background:#ffffff;
+        padding:4px;
+        flex-shrink:0;
+    }
+
+    .brand-text{
+        display:inline-block;
+        margin-left:14px;
+    }
+
+    .brand-name{
+        display:block;
+        font-size:22px;
+        font-weight:600;
+        color:#ffffff;
+        letter-spacing:0.5px;
+        line-height:1.2;
+    }
+
+    .brand-tagline{
+        display:block;
+        margin-top:6px;
+        font-size:11px;
+        font-weight:400;
+        color:#777777;
+        letter-spacing:2px;
+        text-transform:uppercase;
+        line-height:1.5;
+    }
+
+    .body{
+        padding:40px 48px;
+    }
+
+    .greeting-eyebrow{
+        font-size:11px;
+        font-weight:600;
+        letter-spacing:3px;
+        text-transform:uppercase;
+        color:#999;
+        margin-bottom:10px;
+    }
+
+    .greeting-heading{
+        font-size:32px;
+        font-weight:bold;
+        color:#0c0c0c;
+        line-height:1.3;
+        margin-bottom:18px;
+    }
+
+    .greeting-heading span{
+        border-bottom:3px solid #ef6c00;
+        padding-bottom:2px;
+    }
+
+    .intro-text{
+        font-size:14px;
+        color:#666;
+        line-height:1.8;
+        margin-bottom:32px;
+    }
+
+    .update-card{
+        background:#faf9f7;
+        border:1px solid #ede9e3;
+        border-radius:16px;
+        padding:30px 24px;
+        text-align:center;
+        margin-bottom:32px;
+    }
+
+    .update-icon{
+        font-size:42px;
+        margin-bottom:18px;
+    }
+
+    .update-label{
+        font-size:11px;
+        letter-spacing:2px;
+        text-transform:uppercase;
+        color:#999;
+        margin-bottom:14px;
+    }
+
+    .update-title{
+        font-size:22px;
+        font-weight:bold;
+        color:#0c0c0c;
+        margin-bottom:16px;
+    }
+
+    .update-desc{
+        font-size:13px;
+        color:#777;
+        line-height:1.7;
+    }
+
+    .details-box{
+        border:1px solid #ede9e3;
+        border-radius:14px;
+        overflow:hidden;
+        margin-bottom:30px;
+    }
+
+    .detail-row{
+        padding:14px 18px;
+        border-bottom:1px solid #ede9e3;
+        font-size:13px;
+    }
+
+    .detail-row:last-child{
+        border-bottom:none;
+    }
+
+    .detail-label{
+        color:#999;
+        display:inline-block;
+        width:150px;
+    }
+
+    .detail-value{
+        color:#222;
+        font-weight:600;
+    }
+
+    .priority-low{
+        color:#2e7d32;
+        font-weight:bold;
+    }
+
+    .priority-medium{
+        color:#f9a825;
+        font-weight:bold;
+    }
+
+    .priority-high{
+        color:#ef6c00;
+        font-weight:bold;
+    }
+
+    .priority-critical{
+        color:#d32f2f;
+        font-weight:bold;
+    }
+
+    .note-box{
+        background:#fff8ef;
+        border:1px solid #f3dec2;
+        border-radius:14px;
+        padding:18px;
+        margin-bottom:30px;
+    }
+
+    .note-box p{
+        font-size:13px;
+        color:#7a5a2f;
+        line-height:1.7;
+    }
+
+    .action-box{
+        text-align:center;
+        margin-bottom:30px;
+    }
+
+    .action-btn{
+        display:inline-block;
+        background:#0c0c0c;
+        color:#ffffff !important;
+        text-decoration:none;
+        padding:14px 28px;
+        border-radius:12px;
+        font-size:13px;
+        font-weight:600;
+        letter-spacing:0.5px;
+    }
+
+    .signoff{
+        border-top:1px solid #f0ede8;
+        padding-top:24px;
+    }
+
+    .signoff-text p{
+        font-size:13px;
+        color:#888;
+        line-height:1.7;
+    }
+
+    .signoff-text strong{
+        color:#333;
+    }
+
+    .footer{
+        background:#faf9f7;
+        border-top:1px solid #ede9e3;
+        padding:18px 48px;
+        text-align:center;
+    }
+
+    .footer p{
+        font-size:11px;
+        color:#bbb;
+        letter-spacing:0.3px;
+    }
+
+    @media(max-width:600px){
+
+        .header,
+        .body,
+        .footer{
+            padding-left:24px;
+            padding-right:24px;
+        }
+
+        .greeting-heading{
+            font-size:26px;
+        }
+
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="email-wrapper">
+
+    <p class="pre-header">
+        Complaint Priority Updated · NagarSeva
+    </p>
+
+    <div class="email-card">
+
+        <!-- Header -->
+        <div class="header">
+
+            <div class="brand-row">
+
+                <img
+                    src="https://res.cloudinary.com/dzexb7f3p/image/upload/v1778174553/Gemini_Generated_Image_dk0cs1dk0cs1dk0c_4_copy_ibfkmg.png"
+                    alt="NagarSeva Logo"
+                    class="logo-image"
+                />
+
+                <div class="brand-text">
+
+                    <span class="brand-name">
+                        NagarSeva
+                    </span>
+
+                    <span class="brand-tagline">
+                        Your Voice. Your City. Your Change.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Body -->
+        <div class="body">
+
+            <p class="greeting-eyebrow">
+                Priority Escalation
+            </p>
+
+            <h1 class="greeting-heading">
+                Complaint <span>Priority Updated</span> ⚠️
+            </h1>
+
+            <p class="intro-text">
+                Hello {{officerName}}, the priority level of a complaint assigned to you has been updated by the Ward Councillor. Please review the updated priority and take the necessary action accordingly.
+            </p>
+
+            <!-- Update Card -->
+            <div class="update-card">
+
+                <div class="update-icon">
+                    🚨
+                </div>
+
+                <p class="update-label">
+                    Priority Modification
+                </p>
+
+                <h2 class="update-title">
+                    Complaint Escalation Notice
+                </h2>
+
+                <p class="update-desc">
+                    The complaint priority has been revised to ensure timely handling based on urgency, civic impact, and councillor review.
+                </p>
+
+            </div>
+
+            <!-- Details -->
+            <div class="details-box">
+
+                <div class="detail-row">
+                    <span class="detail-label">Complaint ID</span>
+                    <span class="detail-value">#NS-{{complaintId}}</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">Issue Type</span>
+                    <span class="detail-value">{{issueType}}</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">Ward</span>
+                    <span class="detail-value">Ward {{wardNo}}</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">Previous Priority</span>
+                    <span class="detail-value priority-{{prevPriorityClass}}">
+                {{prevPriority}}
+              </span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">Updated Priority</span>
+                    <span class="detail-value priority-{{newPriorityClass}}">
+                {{newPriority}}
+              </span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">Updated By</span>
+                    <span class="detail-value">Ward Councillor</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">Updated On</span>
+                    <span class="detail-value">{{date}} · {{time}} IST</span>
+                </div>
+
+            </div>
+
+            <!-- Note -->
+            <div class="note-box">
+
+                <p>
+                    Complaints marked with elevated priority levels require faster response and continuous status tracking to maintain service accountability and citizen trust.
+                </p>
+
+            </div>
+
+            <!-- Action -->
+            <div class="action-box">
+
+                <a href="{{DASHBOARD_URL}}" class="action-btn">
+                    Review Complaint
+                </a>
+
+            </div>
+
+            <!-- Signoff -->
+            <div class="signoff">
+
+                <div class="signoff-text">
+
+                    <p>
+                        Thank you for helping maintain efficient and responsive civic operations across NagarSeva. 🏙️<br>
+                        <strong>— Team NagarSeva</strong>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2025 NagarSeva. All rights reserved.</p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+
