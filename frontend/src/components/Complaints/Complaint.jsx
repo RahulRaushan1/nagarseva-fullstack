@@ -33,7 +33,7 @@ const Complaint = ({
       setLoading(true);
       setLoaderText("Loading details...");
       const response = await fetch(
-        `http://localhost:8080/admin/complaint/${complaintId}`,
+        `http://https://nagarseva-backend-oy56.onrender.com/admin/complaint/${complaintId}`,
         {
           method: "GET",
           headers: {
@@ -87,7 +87,7 @@ const Complaint = ({
       setLoading(true);
     }, 300);
 
-    let url = `http://localhost:8080/admin/complaints?page=${page}&size=${size}`;
+    let url = `http://https://nagarseva-backend-oy56.onrender.com/admin/complaints?page=${page}&size=${size}`;
     if (filtered.status != "") {
       url += `&status=${filtered.status}`;
     }
@@ -144,7 +144,7 @@ const Complaint = ({
       setLoading(true);
     }, 300);
 
-    let url = `http://localhost:8080/admin/complaints/search?page=${currentPage}&size=${size}`;
+    let url = `http://https://nagarseva-backend-oy56.onrender.com/admin/complaints/search?page=${currentPage}&size=${size}`;
     if (searchBar.trim() != "") {
       url += `&keyword=${searchBar}`;
     }

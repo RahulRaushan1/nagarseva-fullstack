@@ -57,7 +57,7 @@ const OfficerDashboard = () => {
     const loaderId = setTimeout(() => setLoading(true), 300);
 
     try {
-      const response = await fetch("http://localhost:8080/officer/wards", {
+      const response = await fetch("http://https://nagarseva-backend-oy56.onrender.com/officer/wards", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -105,7 +105,7 @@ const OfficerDashboard = () => {
     setLoaderText("Loading dashboard...");
     const loaderId = setTimeout(() => setLoading(true), 300);
     try {
-      const response = await fetch("http://localhost:8080/officer/dashboard", {
+      const response = await fetch("http://https://nagarseva-backend-oy56.onrender.com/officer/dashboard", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

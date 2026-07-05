@@ -63,7 +63,7 @@ const MyComplaints = ({
     const loaderId = setTimeout(() => setLoading(false), 300);
     try {
       const response = await fetch(
-        `http://localhost:8080/citizen/complaint/${complaintId}`,
+        `http://https://nagarseva-backend-oy56.onrender.com/citizen/complaint/${complaintId}`,
         {
           method: "GET",
           headers: {
@@ -105,7 +105,7 @@ const MyComplaints = ({
       setLoading(true);
     }, 300);
 
-    let url = `http://localhost:8080/citizen/complaints?page=${page}&size=${size}`;
+    let url = `http://https://nagarseva-backend-oy56.onrender.com/citizen/complaints?page=${page}&size=${size}`;
 
     if (filtered.status != "") {
       url += `&status=${filtered.status}`;
@@ -165,7 +165,7 @@ const MyComplaints = ({
       setLoading(true);
     }, 300);
 
-    let url = `http://localhost:8080/citizen/complaints/search?page=${currentPage}&size=${size}`;
+    let url = `http://https://nagarseva-backend-oy56.onrender.com/citizen/complaints/search?page=${currentPage}&size=${size}`;
     if (searchBar.trim() != "") {
       url += `&keyword=${searchBar}`;
     }

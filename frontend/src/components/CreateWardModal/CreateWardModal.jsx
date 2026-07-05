@@ -36,7 +36,7 @@ const CreateWardModal = ({ isOpen, onClose, refreshWard, refreshWardDetails}) =>
     setLoading(true);
     try {
 
-      const response = await fetch("http://localhost:8080/admin/ward", {
+      const response = await fetch("http://https://nagarseva-backend-oy56.onrender.com/admin/ward", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

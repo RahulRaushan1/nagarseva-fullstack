@@ -42,7 +42,7 @@ const ResolvedComplaint = ({
       setLoading(true);
     }, 300);
 
-    let url = `http://localhost:8080/officer/complaints/resolved?page=${page}&size=${size}`;
+    let url = `http://https://nagarseva-backend-oy56.onrender.com/officer/complaints/resolved?page=${page}&size=${size}`;
     if (filtered.status != "") {
       url += `&status=${filtered.status}`;
     }
@@ -90,7 +90,7 @@ const ResolvedComplaint = ({
     try {                 
       setLoaderText("Loading details...");
       const response = await fetch(
-        `http://localhost:8080/officer/complaint/${complaintId}`,
+        `http://https://nagarseva-backend-oy56.onrender.com/officer/complaint/${complaintId}`,
         {
           method: "GET",
           headers: {
@@ -135,7 +135,7 @@ const ResolvedComplaint = ({
       setLoading(true);
     }, 300);
 
-    let url = `http://localhost:8080/officer/complaints/resolved/search?page=${currentPage}&size=${size}`;
+    let url = `http://https://nagarseva-backend-oy56.onrender.com/officer/complaints/resolved/search?page=${currentPage}&size=${size}`;
     if (searchBar.trim() != "") {
       url += `&keyword=${searchBar}`;
     }

@@ -52,7 +52,7 @@ const WardManagement = ({
 
     const loaderId = setTimeout(() => setLoading(true), 300);
     try {
-      const response = await fetch("http://localhost:8080/admin/wards", {
+      const response = await fetch("http://https://nagarseva-backend-oy56.onrender.com/admin/wards", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -91,7 +91,7 @@ const WardManagement = ({
 
   const fetchWardCouncillors = async () => {
     try {
-      const response = await fetch("http://localhost:8080/admin/councillors", {
+      const response = await fetch("http://https://nagarseva-backend-oy56.onrender.com/admin/councillors", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -123,7 +123,7 @@ const WardManagement = ({
       setLoading(true);
     }, 300);
 
-    let url = `http://localhost:8080/admin/wards/search?`;
+    let url = `http://https://nagarseva-backend-oy56.onrender.com/admin/wards/search?`;
     if (debouncedSearch.trim() != "") {
       url += `&keyword=${debouncedSearch}`;
     }

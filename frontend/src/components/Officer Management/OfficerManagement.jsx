@@ -46,7 +46,7 @@ const OfficerManagement = ({ filtered, scrollRef, setLoading, setLoaderText, isC
 
     const loadingId = setTimeout(() => setLoading(true), 300)
     try {
-      let url = `http://localhost:8080/admin/officers?page=${customPage}`
+      let url = `http://https://nagarseva-backend-oy56.onrender.com/admin/officers?page=${customPage}`
 
       if (filtered.department != "") url += `&department=${filtered.department}`
 
@@ -103,7 +103,7 @@ const OfficerManagement = ({ filtered, scrollRef, setLoading, setLoaderText, isC
       setLoading(true);
     }, 300);
 
-    let url = `http://localhost:8080/admin/officers/search?page=${currentPage}&size=${size}`;
+    let url = `http://https://nagarseva-backend-oy56.onrender.com/admin/officers/search?page=${currentPage}&size=${size}`;
     if (debouncedSearch.trim() != "") {
       url += `&keyword=${debouncedSearch}`;
     }

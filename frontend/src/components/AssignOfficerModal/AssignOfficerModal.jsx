@@ -24,7 +24,7 @@ const AssignOfficerModal = ({ complaint, onClose, setLoading, setLoaderText, ref
     const loaderId = setTimeout(() => setLoading(true),300);
 
     try {
-      const response = await fetch(`http://localhost:8080/admin/departments/officers?department=${selectedDept}`,{
+      const response = await fetch(`http://https://nagarseva-backend-oy56.onrender.com/admin/departments/officers?department=${selectedDept}`,{
         method : "GET",
         headers : {
           "Content-Type" : "Application/json",
@@ -64,7 +64,7 @@ const AssignOfficerModal = ({ complaint, onClose, setLoading, setLoaderText, ref
     const loaderId = setTimeout(() => setLoading(true),300);
 
     try {
-      const response = await fetch(`http://localhost:8080/admin/complaint/${complaint.complaintId}/assign?offId=${officerId}`,{
+      const response = await fetch(`http://https://nagarseva-backend-oy56.onrender.com/admin/complaint/${complaint.complaintId}/assign?offId=${officerId}`,{
         method : "PUT",
         headers : {
           "Content-Type" : "Application/json",

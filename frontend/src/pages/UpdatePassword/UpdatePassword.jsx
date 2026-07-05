@@ -52,7 +52,7 @@ const UpdatePassword = () => {
 
     try {
       // Typically you would send the token in headers to identify the user
-      const response = await fetch("http://localhost:8080/change-password", {
+      const response = await fetch("http://https://nagarseva-backend-oy56.onrender.com/change-password", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
