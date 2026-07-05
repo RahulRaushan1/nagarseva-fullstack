@@ -42,7 +42,7 @@ const AdminComplaintDetails = ({
 
     try {
       const response = await fetch(
-        `http://https://nagarseva-backend-oy56.onrender.com/admin/complaint/${complaint.complaintId}/approve`,
+        `https://nagarseva-backend-oy56.onrender.com/admin/complaint/${complaint.complaintId}/approve`,
         {
           method: "PUT",
           headers: {

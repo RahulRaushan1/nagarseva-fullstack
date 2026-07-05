@@ -132,7 +132,7 @@ const CreateComplaint = ({ onCancel, ward, setLoading, setLoaderText, refreshCom
     const loaderTimeout = setTimeout(() => setLoading(true), 300);
 
     try {
-      const response = await fetch("http://https://nagarseva-backend-oy56.onrender.com/citizen/complaint", {
+      const response = await fetch("https://nagarseva-backend-oy56.onrender.com/citizen/complaint", {
         method: "POST",
         headers: {
           authorization: `Bearer ${localStorage.getItem("token")}`,

@@ -60,7 +60,7 @@ const Signup = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://https://nagarseva-backend-oy56.onrender.com/register", {
+      const response = await fetch("https://nagarseva-backend-oy56.onrender.com/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

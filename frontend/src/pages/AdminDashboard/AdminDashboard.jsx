@@ -90,7 +90,7 @@ const AdminDashboard = () => {
     const loaderId = setTimeout(() => setIsLoading(true),300)
 
       try {
-        const response = await fetch("http://https://nagarseva-backend-oy56.onrender.com/admin/wards", {
+        const response = await fetch("https://nagarseva-backend-oy56.onrender.com/admin/wards", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -139,7 +139,7 @@ const AdminDashboard = () => {
     const loaderId = setTimeout(() => setIsLoading(true), 300);
 
     try {
-      const response = await fetch("http://https://nagarseva-backend-oy56.onrender.com/admin/dashboard", {
+      const response = await fetch("https://nagarseva-backend-oy56.onrender.com/admin/dashboard", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

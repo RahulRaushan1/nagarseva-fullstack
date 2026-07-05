@@ -45,7 +45,7 @@ const WorkCompletionModal = ({ complaint, onClose, onSuccess, setLoading, setLoa
       }
 
       const response = await fetch(
-        `http://https://nagarseva-backend-oy56.onrender.com/officer/complaint/${complaint.complaintId}/finish`,
+        `https://nagarseva-backend-oy56.onrender.com/officer/complaint/${complaint.complaintId}/finish`,
         {
           method: "PUT",
           headers: {

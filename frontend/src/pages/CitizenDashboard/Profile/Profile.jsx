@@ -22,7 +22,7 @@ const Profile = ({ setLoading, setLoaderText }) => {
     setLoaderText("Fetching profile details...");
     const loaderId = setTimeout(() => setLoading(true),300)
     try {
-      const response = await fetch("http://https://nagarseva-backend-oy56.onrender.com/citizen/profile", {
+      const response = await fetch("https://nagarseva-backend-oy56.onrender.com/citizen/profile", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -75,7 +75,7 @@ const Profile = ({ setLoading, setLoaderText }) => {
     const loaderId = setTimeout(() => setLoading(true),300);
 
     try {
-      const response = await fetch(`http://https://nagarseva-backend-oy56.onrender.com/citizen/profile/${profile.id}?notificationsEnabled=${notificationsEnabled}`,{
+      const response = await fetch(`https://nagarseva-backend-oy56.onrender.com/citizen/profile/${profile.id}?notificationsEnabled=${notificationsEnabled}`,{
         headers : {
           "Content-Type" : "application/json",
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -131,7 +131,7 @@ const Profile = ({ setLoading, setLoaderText }) => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://https://nagarseva-backend-oy56.onrender.com/change-password", {
+      const response = await fetch("https://nagarseva-backend-oy56.onrender.com/change-password", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

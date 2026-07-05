@@ -27,7 +27,7 @@ const AssignCouncillorModal = ({
     const loaderId = setTimeout(() => setLoading(true),300)
 
     try {
-        const response = await fetch(`http://https://nagarseva-backend-oy56.onrender.com/admin/ward/${ward.wardId}/assign-wc?councillorId=${selectedCouncillor}`,{
+        const response = await fetch(`https://nagarseva-backend-oy56.onrender.com/admin/ward/${ward.wardId}/assign-wc?councillorId=${selectedCouncillor}`,{
             method : "PUT",
             headers : {
                 "Content-Type" : "Application/json",

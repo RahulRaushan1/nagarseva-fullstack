@@ -34,7 +34,7 @@ const CouncillorDashboard = () => {
     useEffect(() => {
       const fetchProfile = async () => {
         try {
-          const response = await fetch("http://https://nagarseva-backend-oy56.onrender.com/councillor/profile", {
+          const response = await fetch("https://nagarseva-backend-oy56.onrender.com/councillor/profile", {
             method: "GET",
             headers: {
               "Content-Type": "application/json",
@@ -70,7 +70,7 @@ const CouncillorDashboard = () => {
     setLoaderText("Loading dashboard...");
     const loaderId = setTimeout(() => setLoading(true), 300);
     try {
-      const response = await fetch("http://https://nagarseva-backend-oy56.onrender.com/councillor/dashboard", {
+      const response = await fetch("https://nagarseva-backend-oy56.onrender.com/councillor/dashboard", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

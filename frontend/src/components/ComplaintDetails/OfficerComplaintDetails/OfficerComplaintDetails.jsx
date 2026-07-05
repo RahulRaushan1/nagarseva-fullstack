@@ -46,7 +46,7 @@ const OfficerComplaintDetails = ({
 
     try {
       const response = await fetch(
-        `http://https://nagarseva-backend-oy56.onrender.com/officer/complaint/${complaint.complaintId}/start`,
+        `https://nagarseva-backend-oy56.onrender.com/officer/complaint/${complaint.complaintId}/start`,
         {
           method: "PUT",
           headers: {

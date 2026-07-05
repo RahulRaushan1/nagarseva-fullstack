@@ -24,7 +24,7 @@ const CouncillorProfile = ({ setLoading, setLoaderText }) => {
     setLoaderText("Fetching profile details...");
     const loaderId = setTimeout(() => setLoading(true),300)
     try {
-      const response = await fetch("http://https://nagarseva-backend-oy56.onrender.com/councillor/profile", {
+      const response = await fetch("https://nagarseva-backend-oy56.onrender.com/councillor/profile", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -87,7 +87,7 @@ const CouncillorProfile = ({ setLoading, setLoaderText }) => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://https://nagarseva-backend-oy56.onrender.com/change-password", {
+      const response = await fetch("https://nagarseva-backend-oy56.onrender.com/change-password", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

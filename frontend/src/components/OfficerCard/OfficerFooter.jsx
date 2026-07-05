@@ -15,7 +15,7 @@ const OfficerFooter = ({userId, currentStatus}) => {
   const handleAccount = async () => {
     const nextStatus = !active;
     try {
-      const response = await fetch(`http://https://nagarseva-backend-oy56.onrender.com/admin/user/${userId}/status?active=${nextStatus}`,{
+      const response = await fetch(`https://nagarseva-backend-oy56.onrender.com/admin/user/${userId}/status?active=${nextStatus}`,{
         method : "PUT",
         headers : {
           Authorization : `Bearer ${localStorage.getItem("token")}`

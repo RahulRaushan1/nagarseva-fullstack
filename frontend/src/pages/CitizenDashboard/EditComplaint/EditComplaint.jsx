@@ -85,7 +85,7 @@ const EditComplaint = ({ complaint, ward, onCancel, setLoading, setLoaderText })
     const loaderTimeout = setTimeout(() => setLoading(true), 300);
 
     try {
-      const response = await fetch(`http://https://nagarseva-backend-oy56.onrender.com/citizen/complaint/${complaint.complaintId}`, {
+      const response = await fetch(`https://nagarseva-backend-oy56.onrender.com/citizen/complaint/${complaint.complaintId}`, {
         method: "PUT", // Assuming PUT for updating
         headers: {
           authorization: `Bearer ${localStorage.getItem("token")}`,

@@ -54,7 +54,7 @@ const WardComplaints = ({ scrollRef, filtered, setLoading, setLoaderText, search
       setLoading(true);
     }, 300);
 
-    let url = `http://https://nagarseva-backend-oy56.onrender.com/councillor/complaints?page=${page}&size=${size}`;
+    let url = `https://nagarseva-backend-oy56.onrender.com/councillor/complaints?page=${page}&size=${size}`;
 
     if (filtered.status != "") {
       url += `&status=${filtered.status}`;
@@ -113,7 +113,7 @@ const WardComplaints = ({ scrollRef, filtered, setLoading, setLoaderText, search
       setLoading(true);
     }, 300);
 
-    let url = `http://https://nagarseva-backend-oy56.onrender.com/councillor/complaints/search?page=${currentPage}&size=${size}`;
+    let url = `https://nagarseva-backend-oy56.onrender.com/councillor/complaints/search?page=${currentPage}&size=${size}`;
     if (searchBar.trim() != "") {
       url += `&keyword=${searchBar}`;
     }
@@ -155,7 +155,7 @@ const WardComplaints = ({ scrollRef, filtered, setLoading, setLoaderText, search
       const loaderId = setTimeout(() => setLoading(false),300)
       try {
         const response = await fetch(
-          `http://https://nagarseva-backend-oy56.onrender.com/councillor/complaint/${complaintId}`,
+          `https://nagarseva-backend-oy56.onrender.com/councillor/complaint/${complaintId}`,
           {
             method: "GET",
             headers: {

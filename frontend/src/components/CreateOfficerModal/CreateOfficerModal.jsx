@@ -49,7 +49,7 @@ const CreateOfficerModal = ({ isOpen, onClose, refreshOfficer, setLoading, setLo
 
     const loaderId = setTimeout(() => setLoading(true),300);
     try {
-      const response = await fetch("http://https://nagarseva-backend-oy56.onrender.com/admin/user", {
+      const response = await fetch("https://nagarseva-backend-oy56.onrender.com/admin/user", {
         method : "POST",
         headers : {
           "Content-Type" : "application/json",

@@ -33,7 +33,7 @@ const UpdateWardModal = ({
 
     try {
       const response = await fetch(
-        `http://https://nagarseva-backend-oy56.onrender.com/admin/ward/${selectedWard.wardId}`,
+        `https://nagarseva-backend-oy56.onrender.com/admin/ward/${selectedWard.wardId}`,
         {
           method: "PUT",
           headers: {

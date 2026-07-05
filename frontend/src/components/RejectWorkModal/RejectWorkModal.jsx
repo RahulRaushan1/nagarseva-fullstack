@@ -39,7 +39,7 @@ const RejectWorkModal = ({
 
     try {
       const response = await fetch(
-        `http://https://nagarseva-backend-oy56.onrender.com/citizen/complaint/${complaintId}/reject`,
+        `https://nagarseva-backend-oy56.onrender.com/citizen/complaint/${complaintId}/reject`,
         {
           method: "PUT",
           headers: {

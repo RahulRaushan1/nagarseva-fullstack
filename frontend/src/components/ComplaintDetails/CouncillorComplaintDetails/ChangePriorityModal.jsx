@@ -30,7 +30,7 @@ const ChangePriorityModal = ({
 
     try {
       const response = await fetch(
-        `http://https://nagarseva-backend-oy56.onrender.com/councillor/complaint/${complaint.complaintId}?priority=${priority}`,
+        `https://nagarseva-backend-oy56.onrender.com/councillor/complaint/${complaint.complaintId}?priority=${priority}`,
         {
           method: "PUT",
           headers: {

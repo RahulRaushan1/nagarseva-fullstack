@@ -38,7 +38,7 @@ const ComplaintEdit = ({
     const loaderId = setTimeout(() => setLoading(true),300)
     try {
       const response = await fetch(
-        `http://https://nagarseva-backend-oy56.onrender.com/citizen/complaint/${complaintId}`,
+        `https://nagarseva-backend-oy56.onrender.com/citizen/complaint/${complaintId}`,
         {
           method: "DELETE",
           headers: {
@@ -116,7 +116,7 @@ const ComplaintEdit = ({
 
     try {
       const response = await fetch(
-        `http://https://nagarseva-backend-oy56.onrender.com/citizen/complaint/${complaintId}`,
+        `https://nagarseva-backend-oy56.onrender.com/citizen/complaint/${complaintId}`,
         {
           method: "GET",
           headers: {
@@ -174,7 +174,7 @@ const ComplaintEdit = ({
     const loaderTimeout = setTimeout(() => setLoading(true), 300);
     try {
       const response = await fetch(
-        `http://https://nagarseva-backend-oy56.onrender.com/citizen/complaint/${complaintId}`,
+        `https://nagarseva-backend-oy56.onrender.com/citizen/complaint/${complaintId}`,
         {
           method: "PUT", // Assuming PUT for updating
           headers: {

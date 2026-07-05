@@ -49,7 +49,7 @@ const CitizenComplaintDetails = ({
     const loaderId = setTimeout(() => setLoading(true),300)
 
     try {
-      const response = await fetch(`http://https://nagarseva-backend-oy56.onrender.com/citizen/complaint/${complaint.complaintId}/accept`,{
+      const response = await fetch(`https://nagarseva-backend-oy56.onrender.com/citizen/complaint/${complaint.complaintId}/accept`,{
         method : "PUT",
         headers : {
           "Content-Type" : "application/json",

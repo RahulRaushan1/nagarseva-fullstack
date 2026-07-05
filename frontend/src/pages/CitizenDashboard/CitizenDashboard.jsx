@@ -37,7 +37,7 @@ const CitizenDashboard = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await fetch("http://https://nagarseva-backend-oy56.onrender.com/citizen/profile", {
+        const response = await fetch("https://nagarseva-backend-oy56.onrender.com/citizen/profile", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -75,7 +75,7 @@ const CitizenDashboard = () => {
     setLoaderText("Loading data...");
     const loaderId = setTimeout(() => setLoading(true), 300);
     try {
-      const response = await fetch("http://https://nagarseva-backend-oy56.onrender.com/citizen/wards", {
+      const response = await fetch("https://nagarseva-backend-oy56.onrender.com/citizen/wards", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -107,7 +107,7 @@ const CitizenDashboard = () => {
     setLoaderText("Loading dashboard...");
     const loaderId = setTimeout(() => setLoading(true), 300);
     try {
-      const response = await fetch("http://https://nagarseva-backend-oy56.onrender.com/citizen/dashboard", {
+      const response = await fetch("https://nagarseva-backend-oy56.onrender.com/citizen/dashboard", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
